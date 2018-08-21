@@ -40,18 +40,18 @@ Deployed Multisig: 0xfAB8d14e8DE6cF567678a2f300A68EE5E54fF0a0
    Required Signatures: 2
 
 ```
-
-
 flow of transaction from command lines
+```bash
 ~# node 
-~# > var Web3 = require('web3');
-~# > var web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/yourapikey'));
-~# > var privateKey = 'your-private-key';
-~# > web3.eth.accounts.wallet.add("0x" + privateKey);
-~# > web3.eth.accounts // check web3 account well imported
-~# > var abi = [...];
-~# > var MyContract = new web3.eth.Contract(abi, '0x3D694Eb73962BFDDCC4b795893588D8142030cbD');
-~# > console.log(MyContract);
-~# > MyContract.methods.getOwners().call({from : '0x5C7EB9331Fd719EEdeeb19802cB8de8F6c53a79C'}).then(receipt => { console.log(receipt) });
-~# > MyContract.methods.addOwner("0xeC8F1C1d83377A6bAd02ff1aF49d9e4FDdBa01F8").send({from : '0x5C7EB9331Fd719EEdeeb19802cB8de8F6c53a79C', gas : 800000}).then(receipt => { console.log(receipt) });
-~# > MyContract.methods.submitTransaction("0x3D694Eb73962BFDDCC4b795893588D8142030cbD",2, "0x").send({from : '0x5C7EB9331Fd719EEdeeb19802cB8de8F6c53a79C', gas : 800000}).then(receipt => { console.log(receipt) });
+> var Web3 = require('web3');
+> var web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/yourapikey'));
+> var privateKey = 'your-private-key';
+> web3.eth.accounts.wallet.add("0x" + privateKey);
+> web3.eth.accounts // check web3 account well imported
+> var abi = [...];
+> var MyContract = new web3.eth.Contract(abi, '0x3D694Eb73962BFDDCC4b795893588D8142030cbD');
+> console.log(MyContract);
+> MyContract.methods.getOwners().call({from : '0x5C7EB9331Fd719EEdeeb19802cB8de8F6c53a79C'}).then(receipt => { console.log(receipt) });
+> MyContract.methods.addOwner("0xeC8F1C1d83377A6bAd02ff1aF49d9e4FDdBa01F8").send({from : '0x5C7EB9331Fd719EEdeeb19802cB8de8F6c53a79C', gas : 800000}).then(receipt => { console.log(receipt) });
+> MyContract.methods.submitTransaction("0x3D694Eb73962BFDDCC4b795893588D8142030cbD",2, "0x").send({from : '0x5C7EB9331Fd719EEdeeb19802cB8de8F6c53a79C', gas : 800000}).then(receipt => { console.log(receipt) });
+```
